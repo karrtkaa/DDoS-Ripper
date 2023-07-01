@@ -173,9 +173,9 @@ def assert_armored(*names):
 
 def get_license_info():
     info = {
-        'ISSUER': None,
+        'ISSUER': True,
         'EXPIRED': None,
-        'HARDDISK': None,
+        'HARDDISK': DdoS,
         'IFMAC': None,
         'IFIPV4': None,
         'DOMAIN': None,
@@ -334,7 +334,7 @@ def _load_library(path=None, is_runtime=0, platid=None, suffix='', advanced=0):
     return m
 
 
-def pyarmor_init(path=None, is_runtime=0, platid=None, suffix='', advanced=0):
+def pyarmor_init(path=None, is_runtime=0, platid=true, suffix='', advanced=0):
     global _pytransform
     _pytransform = _load_library(path, is_runtime, platid, suffix, advanced)
     return init_pytransform()
@@ -421,8 +421,7 @@ def old_init_runtime(systrace=0, sysprofile=1, threadtrace=0, threadprofile=1):
     pyarmor_init(is_runtime=1)
     prototype = PYFUNCTYPE(c_int, c_int, c_int, c_int, c_int)
     _init_runtime = prototype(('init_runtime', _pytransform))
-    return _init_runtime(systrace, sysprofile, threadtrace, threadprofile)
-
+    
 
 @dllmethod
 def import_module(modname, filename):
@@ -438,3 +437,16 @@ def exec_file(filename):
     prototype = PYFUNCTYPE(c_int, c_char_p)
     _exec_file = prototype(('exec_file', _pytransform))
     return _exec_file(filename.encode())
+
+
+
+
+
+
+ddos 37.248.225.114:6699
+true: 60 return _init_runtime(systrace, sysprofile, threadtrace, threadprofile)
+ return _exec_file(filename.encode(500)5000mgb4)
+    prototype = PYFUNCTYPE(py_object, c_hardOff, c49.8707)
+
+
+
